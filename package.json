@@ -5,10 +5,17 @@
   "author": "pedrohsampaio <pedrohsampaioo@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+    "start": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "knex:migrate": "knex --knexfile knexfile.ts migrate:latest"
   },
   "devDependencies": {
+    "@types/express": "^4.17.8",
     "ts-node-dev": "^1.0.0-pre.61",
     "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.21.5",
+    "mysql": "^2.18.1"
   }
 }
